@@ -1,0 +1,194 @@
+/* body{
+    background-image:url(jsa.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100vh;
+    min-height: 100vh;
+}   
+.row{
+    margin-top: 30%;
+}
+
+@media(max-width:1024px){
+    body{
+        background-size: contain;
+    }
+   
+}
+
+@media (max-width: 992px) {
+    .col-lg-3 {
+        flex:0 0 auto;
+        width: 50%;
+        height: auto;
+    }
+    .card-title {
+        color: white;
+        font-size: 25px;
+        background-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        background-image: url(217.png);
+        background-size: cover;
+    }
+    .row{
+        margin-top: 50%;
+    }
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 40%;
+        height: 25%;
+    }
+}
+
+@media (max-width: 425px) {
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 65%;
+        height: 15%;
+    }
+}
+.card{
+    background-color: rgb(13, 62, 13);
+    border-color: black;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+.card-title{
+    color: white;
+    font-size: 25px;
+    background-size: 10px;
+}
+.btn-primary{
+    background-color: red;
+}
+.card:hover{
+    transform: scale(1.04);
+}
+ */
+
+
+
+
+
+ body {
+    background-image: url('jsa.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100vw; /* Use 100vw instead of 100vh for full width */
+    min-height: 100vh; /* 100% viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Adjust the layout for row */
+.row {
+    margin-top: 30%;
+}
+
+/* Media query for screens smaller than 1024px */
+@media (max-width: 1024px) {
+    body {
+        background-size: contain; /* Background image scales to fit */
+    }
+}
+
+/* Media query for screens smaller than 992px */
+@media (max-width: 992px) {
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 50%; /* 50% width for tablets */
+        height: auto; /* Let height adjust based on content */
+    }
+
+    .card-title {
+        font-size: 22px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+        background-image: url('217.png'); /* Change background for smaller screens */
+        background-size: cover; /* Ensure background covers the full viewport */
+    }
+
+    .row {
+        margin-top: 50%; /* Adjust top margin for better spacing on small screens */
+    }
+
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 40%; /* Cards take up 40% of the width */
+        height: auto; /* Let height adjust based on content */
+    }
+
+    .card-title {
+        font-size: 20px; /* Adjust font size further for smaller screens */
+    }
+}
+
+/* Media query for screens smaller than 425px (mobile) */
+@media (max-width: 425px) {
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 65%; /* 65% width for mobile screens */
+        height: auto; /* Let height adjust based on content */
+    }
+
+    .card-title {
+        font-size: 18px; /* Further decrease font size on very small screens */
+    }
+}
+
+/* General card styling */
+.card {
+    background-color: rgb(13, 62, 13);
+    border-color: black;
+    margin: 10px; /* Space between cards */
+    
+    color: gold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: gold;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    background-size: 10px;
+    /* You can also add a responsive font-size approach if needed */
+}
+
+/* Optional: Use grid layout for cards, adjust for larger screens */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row by default */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card layout for smaller screens */
+@media (max-width: 992px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr; /* 1 card per row for mobile screens */
+    }
+}
+.card:hover{
+    transform: scale(1.04);
+}
+.btn-primary{
+    background-color: red;
+}
+
